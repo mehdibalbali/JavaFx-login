@@ -5,10 +5,10 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="282.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="282.0" prefWidth="500.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="login.controller.Controller">
    <children>
-      <JFXTextField fx:id="tflogin" layoutX="108.0" layoutY="70.0" prefHeight="25.0" prefWidth="255.0" promptText="Login" />
-      <JFXButton fx:id="btnConnect" layoutX="363.0" layoutY="243.0" prefHeight="25.0" prefWidth="108.0" text="connect" />
+      <JFXTextField fx:id="tfusername" layoutX="108.0" layoutY="70.0" prefHeight="25.0" prefWidth="255.0" promptText="uername" />
+      <JFXButton fx:id="btnConnect" layoutX="363.0" layoutY="243.0" prefHeight="25.0" prefWidth="108.0" text="connect" onAction="#login" />
       <JFXPasswordField fx:id="tfpwd" layoutX="108.0" layoutY="150.0" prefHeight="25.0" prefWidth="255.0" promptText="password" />
    </children>
 </AnchorPane>
