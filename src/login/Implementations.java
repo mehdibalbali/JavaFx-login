@@ -13,13 +13,8 @@ public class Implementations {
 	public void log(String x, String y) {
 		 c = new Connexion();
 		try {
-			 String sql = "select * from user where (password like '%\"+y+\"%')";
+			 String sql = "select * from user where (user like '"+x+"')and (password like '"+y+"')";
 	         ResultSet rs = c.connect().createStatement().executeQuery(sql);
-	         
-	         ResultSetMetaData rsmd = (ResultSetMetaData) rs.getMetaData();
-
-	         int columnsNumber = rsmd.getColumnCount();
-	        
 	         int rowCount = 0;
 	         while ( rs.next() )
 	         {
@@ -27,11 +22,11 @@ public class Implementations {
 	             rowCount++;
 	             
 	         }
-	         System.out.println(rowCount);
-	         if(rs.next()) {
+	         
+	         if(rowCount==1) {
 	        	 System.out.println("login succses");
 	         }else {
-	        	 System.out.println("non");
+	        	 System.out.println("password or login are wrong !!");
 	         }
 		}catch (Exception ex) {
             Logger.getLogger(Implementations.class.getName()).log(Level.SEVERE, null, ex);
