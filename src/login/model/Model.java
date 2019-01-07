@@ -6,6 +6,8 @@ import javafx.beans.property.StringProperty;
 public class Model {
 	private final StringProperty login = new SimpleStringProperty();
 	private final StringProperty pwd = new SimpleStringProperty();
+	
+	
 	public final StringProperty loginProperty() {
 		return this.login;
 	}
